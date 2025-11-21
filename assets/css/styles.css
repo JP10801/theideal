@@ -1,65 +1,50 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+  --header-height: 4rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(18, 95%, 55%);
-  --second-color: hsl(42, 98%, 52%);
-  --first-gradient: linear-gradient(90deg,
-                  hsl(18, 95%, 55%),
-                  hsl(18, 98%, 64%));
+  /* Colors */
+  --primary-color: hsl(18, 95%, 55%);
+  --primary-color-light: hsl(18, 98%, 64%);
+  --secondary-color: hsl(42, 98%, 52%);
   --title-color: hsl(255, 12%, 12%);
   --text-color: hsl(225, 12%, 24%);
-  --text-color-light: hsl(255, 4%, 70%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(0, 0%, 100%);
-  --white-color: hsl(0, 0%, 100%);
-  --black-color: hsl(255, 20%, 10%);
-  --gray-border: hsl(255, 6%, 90%);
-  --black-border: hsl(255, 10%, 20%);
+  --text-light: hsl(255, 4%, 55%);
+  --background-color: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #e8e8e8;
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+  /* Typography */
   --body-font: "Montserrat", sans-serif;
-  --big-font-size: 2.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --h1-size: 2rem;
+  --h2-size: 1.4rem;
+  --h3-size: 1.1rem;
+  --normal-size: 1rem;
+  --small-size: 0.85rem;
 
-  /*========== Font weight ==========*/
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
+/* Larger screen typography */
 @media screen and (min-width: 1150px) {
   :root {
-    --big-font-size: 3.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
+    --h1-size: 2.5rem;
+    --h2-size: 1.8rem;
+    --h3-size: 1.3rem;
+    --normal-size: 1.1rem;
   }
 }
 
-/*=============== BASE ===============*/
+/*=============== BASE STYLES ===============*/
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -68,120 +53,194 @@ html {
 
 body {
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: var(--background-color);
   color: var(--text-color);
-}
-
-h1, h2, h3, h4 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
+  font-size: var(--normal-size);
 }
 
 img {
+  width: 100%;
   display: block;
-  max-width: 100%;
-  height: auto;
+  border-radius: 8px;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+/*=============== CONTAINER ===============*/
 .container {
   max-width: 1120px;
-  margin-inline: 1.5rem;
+  margin: 0 auto;
+  padding-inline: 1.5rem;
 }
 
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+  justify-content: center;
 }
 
+/*=============== SECTIONS ===============*/
 .section {
-  padding-block: 5rem 1rem;
-}
-.section__title, 
-.section__subtitle {
+  padding: 5rem 0 3rem;
   text-align: center;
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-bold);
-  margin-bottom: 1.5rem;
+  font-size: var(--h1-size);
+  margin-bottom: 1rem;
 }
 
-.section__subtitle {
-  display: block;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  color: var(--second-color);
-  margin-bottom: .5rem;
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  height: var(--header-height);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.main {
-  overflow: hidden;
+/*=============== BUTTONS ===============*/
+.button {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+  margin-top: 1rem;
 }
 
-/*=============== HEADER & NAV ===============*/
+.button:hover {
+  background: var(--primary-color-light);
+  transform: translateY(-2px);
+}
 
+/*=============== HOME SECTION ===============*/
+.home__container {
+  text-align: center;
+}
 
-/* Navigation for mobile devices */
+.home__title {
+  font-size: var(--h1-size);
+  margin-bottom: 1rem;
+}
 
+.home__description {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  color: var(--text-light);
+}
 
-/* Show menu */
+/*=============== ABOUT SECTION ===============*/
+.about__content {
+  max-width: 750px;
+  margin: 0 auto;
+}
 
+.about__description {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
 
-/* Change background header */
+/*=============== SERVICES SECTION ===============*/
+.services__container {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
 
+.services__card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
 
-/* Active link */
+.services__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
 
+.services__icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
 
-/*=============== HOME ===============*/
+.services__title {
+  margin-bottom: 0.5rem;
+  font-size: var(--h3-size);
+}
 
+.services__description {
+  color: var(--text-light);
+  font-size: var(--normal-size);
+}
 
-/*=============== BUTTON ===============*/
+/*=============== PROJECTS SECTION ===============*/
+.projects__container {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
 
+.projects__card {
+  text-align: center;
+}
 
-/*=============== ABOUT ===============*/
+.projects__title {
+  font-size: var(--h3-size);
+  margin-top: 1rem;
+}
 
+.projects__description {
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
 
-/*=============== SERVICES ===============*/
+/*=============== CONTACT SECTION ===============*/
+.contact__info {
+  text-align: center;
+  font-size: var(--normal-size);
+}
 
+.contact__info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--title-color);
+}
 
-/* Swiper class */
-
-
-/*=============== PROJECTS ===============*/
-
-
-/*=============== CONTACT ===============*/
-
+.contact__info i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
 
 /*=============== FOOTER ===============*/
+.footer {
+  background: #f5f5f5;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
 
+.footer__title {
+  font-size: var(--h2-size);
+  margin-bottom: 0.5rem;
+}
 
-/*=============== SCROLL BAR ===============*/
+.footer p {
+  color: var(--text-light);
+  margin-top: 0.5rem;
+  font-size: var(--small-size);
+}
 
-
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up */
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-/* For large devices */
