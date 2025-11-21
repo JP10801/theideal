@@ -9,43 +9,40 @@
    <link rel="stylesheet" href="assets/css/styles.css">
 
    <title>The Ideal Enterprises – Drywall, Cleaning & Moving Services</title>
+
+   <style>
+      /* OPTIONAL INLINE STYLE to ensure centering if your stylesheet doesn't already */
+      .section, .home__content, .about__content, .services__container, .projects__container, .contact__info {
+         text-align: center;
+         margin: 0 auto;
+      }
+
+      .home__container, 
+      .about__container, 
+      .services__container, 
+      .projects__container, 
+      .contact__container {
+         justify-content: center;
+         align-items: center;
+      }
+
+      .home__content, .about__content {
+         max-width: 700px;
+         margin: 0 auto;
+      }
+
+      .contact__info p {
+         font-size: 1.1rem;
+         margin: 10px 0;
+      }
+   </style>
 </head>
 
 <body>
 
    <!--==================== HEADER ====================-->
    <header class="header" id="header">
-      <nav class="nav container">
-         <a href="#home" class="nav__logo">The Ideal Enterprises</a>
-
-         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-               <li class="nav__item">
-                  <a href="#home" class="nav__link">Home</a>
-               </li>
-               <li class="nav__item">
-                  <a href="#about" class="nav__link">About</a>
-               </li>
-               <li class="nav__item">
-                  <a href="#services" class="nav__link">Services</a>
-               </li>
-               <li class="nav__item">
-                  <a href="#projects" class="nav__link">Projects</a>
-               </li>
-               <li class="nav__item">
-                  <a href="#contact" class="nav__link">Contact</a>
-               </li>
-            </ul>
-
-            <div class="nav__close" id="nav-close">
-               <i class="ri-close-line"></i>
-            </div>
-         </div>
-
-         <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line"></i>
-         </div>
-      </nav>
+      
    </header>
 
    <!--==================== MAIN ====================-->
@@ -55,9 +52,9 @@
       <section class="home section" id="home">
          <div class="home__container container grid">
             <div class="home__content">
-               <h1 class="home__title">The Ideal Enterprises</h1>
+               <h1 class="home__title">The Ideal Enterprises – Drywall, Cleaning & Moving Services</h1>
                <p class="home__description">
-                  Professional drywall taping, residential cleaning, and moving services — delivered with care and precision.
+                  The Ideal Enterprises provides trusted drywall finishing, detailed home cleaning, and reliable moving services designed to make your life easier.
                </p>
                <a href="#contact" class="button">Request a Quote</a>
             </div>
@@ -70,11 +67,10 @@
             <div class="about__content">
                <h2 class="section__title">About Us</h2>
                <p class="about__description">
-                  The Ideal Enterprises is committed to delivering excellent home improvement and property care services. 
-                  Whether you need perfectly smooth drywall, spotless home cleaning, or dependable moving help, we ensure quality and professionalism every step of the way.
+                  At The Ideal Enterprises, we take pride in offering high-quality home and property services. From precise drywall taping to thorough residential cleaning and stress-free moving support, our team is committed to delivering results that exceed expectations.
                </p>
                <p class="about__description">
-                  We pride ourselves on honesty, efficient work, and customer-focused service.
+                  Our mission is simple: provide reliable workmanship, honest communication, and services that homeowners can depend on.
                </p>
             </div>
          </div>
@@ -90,7 +86,7 @@
                <i class="ri-brush-line services__icon"></i>
                <h3 class="services__title">Drywall Taping & Finishing</h3>
                <p class="services__description">
-                  Level-smooth drywall finishing including taping, mudding, sanding, patching, and repairs.
+                  Smooth, high-quality drywall finishing including taping, mudding, sanding, and repair work.
                </p>
             </div>
 
@@ -98,7 +94,7 @@
                <i class="ri-home-5-line services__icon"></i>
                <h3 class="services__title">Residential Cleaning</h3>
                <p class="services__description">
-                  Deep cleans, move-in/move-out, recurring cleanings, and post-renovation cleanup services.
+                  Deep cleaning, move-in/move-out cleaning, routine cleaning, and post-construction cleanup done to perfection.
                </p>
             </div>
 
@@ -106,7 +102,7 @@
                <i class="ri-truck-line services__icon"></i>
                <h3 class="services__title">Moving Services</h3>
                <p class="services__description">
-                  Reliable loading, unloading, packing, and full moving support to make relocation stress-free.
+                  Reliable moving assistance including loading, unloading, packing, and full residential relocation support.
                </p>
             </div>
 
@@ -122,19 +118,19 @@
             <div class="projects__card">
                <img src="assets/img/project1.jpg" alt="Drywall Project" class="projects__img">
                <h3 class="projects__title">Basement Drywall Finish</h3>
-               <p class="projects__description">Level-5 smooth finish for a full basement renovation.</p>
+               <p class="projects__description">Smooth Level-5 finish renovation project.</p>
             </div>
 
             <div class="projects__card">
                <img src="assets/img/project2.jpg" alt="Cleaning Project" class="projects__img">
                <h3 class="projects__title">Move-Out Deep Clean</h3>
-               <p class="projects__description">Complete home detail cleaning before a property sale.</p>
+               <p class="projects__description">Full property detail cleaning ready for new owners.</p>
             </div>
 
             <div class="projects__card">
                <img src="assets/img/project3.jpg" alt="Moving Project" class="projects__img">
                <h3 class="projects__title">Residential Relocation</h3>
-               <p class="projects__description">Efficient and careful moving of a 3-bedroom home.</p>
+               <p class="projects__description">Stress-free local moving assistance for a 3-bedroom home.</p>
             </div>
 
          </div>
@@ -164,24 +160,8 @@
       </div>
    </footer>
 
-   <!-- MOBILE MENU JS -->
-   <script>
-      const navMenu = document.getElementById('nav-menu'),
-            navToggle = document.getElementById('nav-toggle'),
-            navClose = document.getElementById('nav-close');
-
-      if(navToggle){
-         navToggle.addEventListener('click', () =>{
-            navMenu.classList.add('show-menu');
-         });
-      }
-
-      if(navClose){
-         navClose.addEventListener('click', () =>{
-            navMenu.classList.remove('show-menu');
-         });
-      }
-   </script>
-
+   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
