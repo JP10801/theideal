@@ -4,26 +4,46 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!--=============== FAVICON ===============-->
    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-   <!--=============== REMIXICONS ===============-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-
-   <!--=============== SWIPER CSS ===============-->
-   <link rel="stylesheet" href="">
-
-   <!--=============== CSS ===============-->
    <link rel="stylesheet" href="assets/css/styles.css">
 
    <title>The Ideal Enterprises – Drywall, Cleaning & Moving Services</title>
+
+   <style>
+      /* OPTIONAL INLINE STYLE to ensure centering if your stylesheet doesn't already */
+      .section, .home__content, .about__content, .services__container, .projects__container, .contact__info {
+         text-align: center;
+         margin: 0 auto;
+      }
+
+      .home__container, 
+      .about__container, 
+      .services__container, 
+      .projects__container, 
+      .contact__container {
+         justify-content: center;
+         align-items: center;
+      }
+
+      .home__content, .about__content {
+         max-width: 700px;
+         margin: 0 auto;
+      }
+
+      .contact__info p {
+         font-size: 1.1rem;
+         margin: 10px 0;
+      }
+   </style>
 </head>
+
 <body>
+
    <!--==================== HEADER ====================-->
    <header class="header" id="header">
       <nav class="nav container">
          <a href="#" class="nav__logo">The Ideal Enterprises</a>
-
          <ul class="nav__menu">
             <li><a href="#home" class="nav__link">Home</a></li>
             <li><a href="#about" class="nav__link">About</a></li>
@@ -36,19 +56,16 @@
 
    <!--==================== MAIN ====================-->
    <main class="main">
+
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
          <div class="home__container container grid">
             <div class="home__content">
                <h1 class="home__title">Professional Drywall, Cleaning & Moving Services</h1>
                <p class="home__description">
-                  The Ideal Enterprises delivers reliable, affordable, and high-quality home services with a commitment to excellence and customer satisfaction.
+                  The Ideal Enterprises provides trusted drywall finishing, detailed home cleaning, and reliable moving services designed to make your life easier.
                </p>
-               <a href="#contact" class="button">Get a Free Quote</a>
-            </div>
-
-            <div class="home__image">
-               <img src="assets/img/home-image.jpg" alt="Home services image">
+               <a href="#contact" class="button">Request a Quote</a>
             </div>
          </div>
       </section>
@@ -56,19 +73,14 @@
       <!--==================== ABOUT ====================-->
       <section class="about section" id="about">
          <div class="about__container container grid">
-            <div class="about__image">
-               <img src="assets/img/about-image.jpg" alt="About us">
-            </div>
-
             <div class="about__content">
                <h2 class="section__title">About Us</h2>
                <p class="about__description">
-                  At The Ideal Enterprises, our team specializes in drywall taping and finishing, residential cleaning, and moving services. We take pride in delivering precise workmanship and dependable results on every project.
+                  At The Ideal Enterprises, we take pride in offering high-quality home and property services. From precise drywall taping to thorough residential cleaning and stress-free moving support, our team is committed to delivering results that exceed expectations.
                </p>
                <p class="about__description">
-                  From home renovations to deep cleaning and relocation services, our mission is to make your experience smooth, stress-free, and professionally handled from start to finish.
+                  Our mission is simple: provide reliable workmanship, honest communication, and services that homeowners can depend on.
                </p>
-               <a href="#services" class="button">Our Services</a>
             </div>
          </div>
       </section>
@@ -83,7 +95,7 @@
                <i class="ri-brush-line services__icon"></i>
                <h3 class="services__title">Drywall Taping & Finishing</h3>
                <p class="services__description">
-                  Professional drywall taping, mudding, sanding, and finishing to create perfectly smooth surfaces ready for paint or texture.
+                  Smooth, high-quality drywall finishing including taping, mudding, sanding, and repair work.
                </p>
             </div>
 
@@ -91,7 +103,7 @@
                <i class="ri-home-5-line services__icon"></i>
                <h3 class="services__title">Residential Cleaning</h3>
                <p class="services__description">
-                  We offer deep cleaning, move-in/move-out cleaning, recurring cleaning, and post-construction cleanup with top-quality results.
+                  Deep cleaning, move-in/move-out cleaning, routine cleaning, and post-construction cleanup done to perfection.
                </p>
             </div>
 
@@ -99,7 +111,7 @@
                <i class="ri-truck-line services__icon"></i>
                <h3 class="services__title">Moving Services</h3>
                <p class="services__description">
-                  Efficient local moving services including loading, unloading, packing, unpacking, and full-service relocation support.
+                  Reliable moving assistance including loading, unloading, packing, and full residential relocation support.
                </p>
             </div>
 
@@ -115,19 +127,19 @@
             <div class="projects__card">
                <img src="assets/img/project1.jpg" alt="Drywall Project" class="projects__img">
                <h3 class="projects__title">Basement Drywall Finish</h3>
-               <p class="projects__description">Smooth, Level-5 drywall finishing for a newly renovated basement.</p>
+               <p class="projects__description">Smooth Level-5 finish renovation project.</p>
             </div>
 
             <div class="projects__card">
                <img src="assets/img/project2.jpg" alt="Cleaning Project" class="projects__img">
                <h3 class="projects__title">Move-Out Deep Clean</h3>
-               <p class="projects__description">Complete home deep cleaning from top to bottom, ready for new owners.</p>
+               <p class="projects__description">Full property detail cleaning ready for new owners.</p>
             </div>
 
             <div class="projects__card">
                <img src="assets/img/project3.jpg" alt="Moving Project" class="projects__img">
-               <h3 class="projects__title">Full Residential Move</h3>
-               <p class="projects__description">Packed, moved, and set up an entire household efficiently and safely.</p>
+               <h3 class="projects__title">Residential Relocation</h3>
+               <p class="projects__description">Stress-free local moving assistance for a 3-bedroom home.</p>
             </div>
 
          </div>
@@ -135,7 +147,7 @@
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">
-         <h2 class="section__title">Contact Us</h2>
+         <h2 class="section__title">Contact</h2>
 
          <div class="contact__container container grid">
             <div class="contact__info">
@@ -143,27 +155,22 @@
                <p><i class="ri-mail-line"></i> contact@theidealenterprises.com</p>
                <p><i class="ri-map-pin-line"></i> Serving the Greater Local Area</p>
             </div>
-
-            <form class="contact__form">
-               <input type="text" placeholder="Your Name" class="contact__input" required>
-               <input type="email" placeholder="Your Email" class="contact__input" required>
-               <textarea placeholder="How can we help you?" class="contact__input" required></textarea>
-               <button class="button">Send Message</button>
-            </form>
          </div>
       </section>
+
    </main>
 
    <!--==================== FOOTER ====================-->
    <footer class="footer">
       <div class="footer__container container">
          <h3 class="footer__title">The Ideal Enterprises</h3>
-         <p>Reliable service. Quality results. Your ideal choice for home services.</p>
+         <p>Your ideal choice for drywall, cleaning, and moving services.</p>
          <p>© 2025 The Ideal Enterprises. All Rights Reserved.</p>
       </div>
    </footer>
 
-   <!--=============== MAIN JS ===============-->
    <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
